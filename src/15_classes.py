@@ -4,7 +4,7 @@
 # YOUR CODE HERE
 
 class LatLon:
-    def __init__(self, lat, lon):
+    def __init__(self, lat, lon):  # initializer
         self.lat = lat
         self.lon = lon
 
@@ -16,10 +16,10 @@ class LatLon:
 
 class Waypoint(LatLon):
     def __init__(self, lat, lon, name):
-        super().__init__(lat, lon)
+        super().__init__(lat, lon)  # super allows inheritance
         self.name = name
 
-    def __str__(self):
+    def __str__(self):  # string representation of object
         return '{self.name} at {self.lat},{self.lon}'.format(self=self)
 
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
@@ -29,8 +29,8 @@ class Waypoint(LatLon):
 
 
 class Geocache(Waypoint):
-    def __init__(self, lat, lon, name, difficulty, size):
-        super().__init__(lat, lon, name)
+    def __init__(self, lat, lon, name, difficulty, size):  # initializer
+        super().__init__(lat, lon, name)  # inheritance
         self.difficulty = difficulty
         self.size = size
 

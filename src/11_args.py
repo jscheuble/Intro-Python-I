@@ -62,8 +62,8 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 
-def f4(**args):
-    for item in args.items():
+def f4(**kwargs):
+    for item in kwargs.items():
         print(f'key: {item[0]}, value:{item[1]}')
 
 
